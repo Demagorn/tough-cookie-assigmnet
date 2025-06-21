@@ -61,7 +61,7 @@ function setGetCookieVows() {
         jar.setCookieSync(cookieStr, sentFrom, {ignoreError: true});
       });
 
-      var actual = jar.getCookiesSync(sentTo,{sort:true});
+      var actual = jar.getCookiesSync(sentTo,{sort:true, now: new Date('2019-08-06').getTime()});
 
       assert.strictEqual(actual.length, expected.length);
 
